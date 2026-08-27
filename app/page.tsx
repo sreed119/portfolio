@@ -25,7 +25,9 @@ export default function Home() {
           <div className="hero-bottom reveal">
             <p className="hero-intro">
               I&rsquo;m Stephanie Reed, a senior at Carnegie Mellon University majoring in Information Systems with an additional major in Human-Computer Interaction.
-              Aspiring full-stack developer, Teaching Assistant for Application Design and Development, and a member of CMU&rsquo;s student choir, C Sharp.</p>
+              Aspiring full-stack developer, Teaching Assistant for Application Design and Development, and a member of CMU&rsquo;s student choir, C Sharp.
+            </p>
+            <a className="text-link" href="/about#experience">View my Experience <ArrowUpRight size={17} /></a>
           </div>
         </section>
         <section className="work-section page-frame" id="work">
