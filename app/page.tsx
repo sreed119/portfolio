@@ -1,7 +1,5 @@
 import {
   ArrowUpRight,
-  CircleUser,
-  Globe,
   Mail,
 } from "lucide-react";
 import Image from "next/image";
@@ -58,8 +56,8 @@ export default function Home() {
       </main>
       <footer className="site-footer page-frame"><span>© 2026 Stephanie Reed</span>
         <div className="social-links">
-          <a href="https://www.linkedin.com/in/stephanie-reed-3a5ba6238/" aria-label="LinkedIn"><CircleUser size={18} /></a>
-          <a href="https://github.com/sreed119" aria-label="GitHub"><Globe size={18} /></a>
+          <a href="https://www.linkedin.com/in/stephanie-reed-3a5ba6238/" target="_blank" aria-label="LinkedIn"><Image src="/Linkedin-Logo.svg" alt="" width={18} height={18} /></a>
+          <a href="https://github.com/sreed119" target="_blank" aria-label="GitHub"><Image src="/GitHub_Invertocat_Black.svg" alt="" width={18} height={18} /></a>
           <a href="mailto:stephanie.reed.3026@gmail.com" aria-label="Email"><Mail size={18} /></a>
         </div>
         <a href="#top">Back to top ↑</a>

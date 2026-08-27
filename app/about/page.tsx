@@ -1,11 +1,8 @@
 import { 
     ArrowUpRight, 
-    CircleUser, 
-    Globe,
     Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import MeppiCarousel from "@/components/meppi-carousel";
 
 const experiences = [
   { number: "01", title: "Software Engineering Intern", company: "Mitsubishi Electric Power Products, Inc.", duration: "Summer 2026", manager: "Mike Doak, Product Line Manager - Power I", image:"Mitsubishi.png", description: "In my role on the Power-I Team, I built a new React dashboard to monitor and audit the performance of Power-I's Machine Learning model services for over 30,000 images per industry client. The dashboard has since been integrated into the Power-I application in production." },
@@ -110,8 +107,8 @@ export default function About() {
 
       <footer className="site-footer page-frame"><span>© 2026 Stephanie Reed</span>
         <div className="social-links">
-          <a href="https://www.linkedin.com/in/stephanie-reed-3a5ba6238/" aria-label="LinkedIn"><CircleUser size={18} /></a>
-          <a href="https://github.com/sreed119" aria-label="GitHub"><Globe size={18} /></a>
+          <a href="https://www.linkedin.com/in/stephanie-reed-3a5ba6238/" target="_blank" aria-label="LinkedIn"><Image src="/Linkedin-Logo.svg" alt="" width={18} height={18} /></a>
+          <a href="https://github.com/sreed119" target="_blank" aria-label="GitHub"><Image src="/GitHub_Invertocat_Black.svg" alt="" width={18} height={18} /></a>
           <a href="mailto:stephanie.reed.3026@gmail.com" aria-label="Email"><Mail size={18} /></a>
         </div>
         <a href="#top">Back to top ↑</a>
