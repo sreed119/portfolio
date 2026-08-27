@@ -38,11 +38,11 @@ export default function Home() {
               <span>{project.number}</span>
               <Image className="project-image" src={project.number === "01" ? "/images/findacosplay.png" : "/images/csharp.png"} alt={`${project.title} preview`} fill sizes="(max-width: 700px) 100vw, 55vw" />
             </div>
-              <div className="project-copy">
-                <span className="project-type">{project.type}</span>
-                <h2>{project.title}</h2>
-                <p>{project.description}</p>
-              </div>
+            <div className="project-copy">
+              <span className="project-type">{project.type}</span>
+              <h2>{project.title}</h2>
+              <p>{project.description}</p>
+            </div>
             <ArrowUpRight className="project-arrow" size={24} strokeWidth={1.5} /></a>)}
           </div>
         </section>
