@@ -17,7 +17,8 @@ export default function Home() {
         <nav className="site-nav" aria-label="Primary navigation"><a href="#work">Projects</a><a href="/about">About</a><a href="#contact">Contact</a><a href="/documents/Stephanie_Reed_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></nav>
       </header>
       <main id="top">
-        <section className="hero page-frame"><p className="eyebrow reveal">Full-Stack Developer</p>
+        <section className="hero page-frame">
+          <p className="eyebrow reveal">Full-Stack Developer</p>
           <h1 className="hero-title reveal">Stephanie Reed</h1>
           <div className="hero-photo reveal"><Image src="/images/stephanieReedHeadshot.png" alt="Stephanie Reed" fill priority sizes="(max-width: 700px) 42vw, 260px" /></div>
           <div className="hero-bottom reveal">

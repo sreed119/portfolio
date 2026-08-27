@@ -141,13 +141,17 @@ body { background: var(--paper); color: var(--ink); }
 .site-nav a:hover, .site-footer a:hover, .text-link:hover { color: var(--orange); }
 .availability { justify-self: end; display: flex; align-items: center; gap: 8px; }
 .availability-dot { width: 7px; height: 7px; border-radius: 50%; background: #4f8b61; }
-.hero { min-height: 690px; padding: 92px 0 48px; position: relative; display: flex; flex-direction: column; }
+.hero { min-height: 690px; padding: clamp(64px, 8vw, 92px) clamp(24px, 5vw, 72px) clamp(42px, 5vw, 60px); position: relative; display: flex; flex-direction: column; overflow: hidden; color: #fff; }
+.hero::before { position: absolute; inset: 0; z-index: 0; background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .62)), url('/images/cmuCampus.jpg') center / cover no-repeat; content: ''; }
+.hero > * { position: relative; z-index: 1; }
 .eyebrow { font-size: 11px; letter-spacing: .13em; text-transform: uppercase; color: #66645d; }
+.hero .eyebrow { color: rgba(255, 255, 255, .78); }
 .eyebrow span { margin-left: 12px; color: var(--ink); }
 .hero-title { margin: auto 0 36px; max-width: 900px; font-size: clamp(4.5rem, 10.7vw, 10.3rem); line-height: .86; letter-spacing: -.07em; font-weight: 500; }
 em { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.06em; }
 .hero-bottom { display: flex; justify-content: space-between; align-items: end; }
 .hero-intro { max-width: 330px; font-size: 15px; line-height: 1.5; }
+.hero .text-link { color: #fff; border-color: #fff; }
 .hero-photo { position: absolute; right: 8%; top: 28%; width: 235px; height: 235px; overflow: hidden; border-radius: 50%; background: var(--blue); }
 .hero-photo img { object-fit: cover; }
 .circle-link { display: grid; place-items: center; width: 58px; height: 58px; border: 1px solid var(--ink); border-radius: 50%; transition: background .2s ease, color .2s ease; }
@@ -173,8 +177,11 @@ em { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.06em; }
 .project-arrow { align-self: start; transition: transform .2s ease; }
 .project-row:hover .project-arrow { transform: translate(4px, -4px); }
 .about-section { padding: 30px 0 155px; border-top: 1px solid var(--line); }
-.about-page-intro { padding: 92px 0 10px; }
-.about-page-title { margin-top: 150px; font-size: clamp(4.5rem, 10vw, 10rem); line-height: .86; letter-spacing: -.07em; font-weight: 500; }
+.about-page-intro { position: relative; overflow: hidden; padding: clamp(64px, 8vw, 92px) clamp(24px, 5vw, 72px) clamp(42px, 5vw, 60px); color: #fff; }
+.about-page-intro::before { position: absolute; inset: 0; z-index: 0; background: linear-gradient(rgba(0, 0, 0, .62), rgba(0, 0, 0, .62)), url('/images/cmuCampus2.jpg') center / cover no-repeat; content: ''; }
+.about-page-intro > * { position: relative; z-index: 1; }
+.about-page-intro .eyebrow { color: rgba(255, 255, 255, .78); }
+.about-page-title { margin-top: 50px; margin-bottom: 20px; font-size: clamp(4.5rem, 10vw, 10rem); line-height: .86; letter-spacing: -.07em; font-weight: 500; }
 .about-details { display: grid; grid-template-columns: 1fr 1fr; gap: 10%; padding: 30px 0 130px; border-top: 1px solid var(--line); }
 .about-details > div { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .about-details > div > p:last-child { font-size: 16px; line-height: 1.5; }
@@ -183,6 +190,8 @@ em { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.06em; }
 .about-copy { max-width: 390px; padding-top: 10px; font-size: 16px; line-height: 1.55; }
 .about-copy p + p { margin-top: 22px; }
 .about-copy strong { font-weight: 500; border-bottom: 1px solid var(--ink); }
+.about-art { position: relative; min-height: 480px; overflow: hidden; }
+.about-art img { object-fit: contain; object-position: center bottom; }
 .experience-section { padding: 30px 0 0px; border-top: 1px solid var(--line); }
 .experience-list { border-bottom: 1px solid var(--line); }
 .experience-row { display: grid; grid-template-columns: 235px minmax(220px, 1fr) 110px minmax(160px, .7fr) minmax(260px, 1.2fr); gap: clamp(16px, 2.5vw, 36px); align-items: center; padding: 28px 0; border-top: 1px solid var(--line); }

@@ -36,6 +36,14 @@ export default function About() {
               <p>Outside of coursework and code, I&apos;m a member of CMU&apos;s student choir, C Sharp, and the secretary of CMU&apos;s Cosplay Club.</p>
               <a className="text-link" href="mailto:stephanie.reed.3026@gmail.com">Get in Touch <ArrowUpRight size={17} /></a>
             </div>
+            <div className="about-art">
+              <Image
+                src="/images/stephanieReedFull.png"
+                alt="Stephanie Reed"
+                fill
+                sizes="(max-width: 700px) 100vw, 48vw"
+              />
+            </div>
           </div>
         </section>
 
