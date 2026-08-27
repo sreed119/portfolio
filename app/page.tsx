@@ -1,69 +1,67 @@
+import {
+  ArrowUpRight,
+  CircleUser,
+  Globe,
+  Mail,
+} from "lucide-react";
 import Image from "next/image";
+
+const projects = [
+  { number: "01", title: "Find a Cosplay: Costume Resource Management System", type: "Developer · 2026", description: "A universal hub to find and review costume resources and materials from several storefronts.", className: "project-findacosplay", href: "https://findacosplay.onrender.com/home" },
+  { number: "02", title: "CMU C Sharp: University Organization's Website", type: "Developer · 2026", description: "The official website for Carnegie Mellon University's student-run singing organization, C Sharp.", className: "project-csharp", href: "https://cmucsharp.com/" }
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="portfolio-shell">
+      <header className="site-header page-frame">
+        <a className="wordmark" href="#top" aria-label="Go to top">Stephanie Reed</a>
+        <nav className="site-nav" aria-label="Primary navigation"><a href="#work">Projects</a><a href="/about">About</a><a href="#contact">Contact</a><a href="/documents/Stephanie_Reed_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></nav>
+      </header>
+      <main id="top">
+        <section className="hero page-frame"><p className="eyebrow reveal">Full-Stack Developer</p>
+          <h1 className="hero-title reveal">Stephanie Reed</h1>
+          <div className="hero-photo reveal"><Image src="/images/stephanieReedHeadshot.png" alt="Stephanie Reed" fill priority sizes="(max-width: 700px) 42vw, 260px" /></div>
+          <div className="hero-bottom reveal">
+            <p className="hero-intro">
+              I&rsquo;m Stephanie Reed, a senior at Carnegie Mellon University majoring in Information Systems with an additional major in Human-Computer Interaction.
+              Aspiring full-stack developer, Teaching Assistant for Application Design and Development, and a member of CMU&rsquo;s student choir, C Sharp.</p>
+          </div>
+        </section>
+        <section className="work-section page-frame" id="work">
+          <div className="section-heading">
+            <p className="eyebrow">Projects <span>(02)</span></p>
+            <span className="section-note">A selection of recent projects</span>
+          </div>
+          <div className="project-list">{projects.map((project) => <a className="project-row" href={project.href} target="_blank" rel="noopener noreferrer" key={project.number}>
+            <div className={`project-art ${project.className}`}>
+              <span>{project.number}</span>
+              <Image className="project-image" src={project.number === "01" ? "/images/findacosplay.png" : "/images/csharp.png"} alt={`${project.title} preview`} fill sizes="(max-width: 700px) 100vw, 55vw" />
+            </div>
+              <div className="project-copy">
+                <span className="project-type">{project.type}</span>
+                <h2>{project.title}</h2>
+                <p>{project.description}</p>
+              </div>
+            <ArrowUpRight className="project-arrow" size={24} strokeWidth={1.5} /></a>)}
+          </div>
+        </section>
+        <section className="contact-section page-frame" id="contact">
+          <div>
+            <p className="eyebrow">Professional Development</p>
+            <h2>Seeking Entry-Level <br /><em>Full-Stack Developer</em> Roles</h2>
+          </div>
+          <a className="contact-email" href="mailto:stephanie.reed.3026@gmail.com">stephanie.reed.3026@gmail.com <ArrowUpRight size={22} /></a>
+        </section>
       </main>
+      <footer className="site-footer page-frame"><span>© 2026 Stephanie Reed</span>
+        <div className="social-links">
+          <a href="https://www.linkedin.com/in/stephanie-reed-3a5ba6238/" aria-label="LinkedIn"><CircleUser size={18} /></a>
+          <a href="https://github.com/sreed119" aria-label="GitHub"><Globe size={18} /></a>
+          <a href="mailto:stephanie.reed.3026@gmail.com" aria-label="Email"><Mail size={18} /></a>
+        </div>
+        <a href="#top">Back to top ↑</a>
+      </footer>
     </div>
   );
 }
