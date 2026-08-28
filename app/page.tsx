@@ -52,7 +52,12 @@ export default function Home() {
             <p className="eyebrow">Professional Development</p>
             <h2>Seeking Entry-Level <br /><em>Full-Stack Developer</em> Roles</h2>
           </div>
-          <a className="contact-email" href="mailto:stephanie.reed.3026@gmail.com">stephanie.reed.3026@gmail.com <ArrowUpRight size={22} /></a>
+          <div className="contact-links">
+            <a className="contact-email" href="https://www.linkedin.com/in/stephanie-reed-3a5ba6238/" target="_blank" >LinkedIn <ArrowUpRight size={22} /></a>
+            <a className="contact-email" href="https://github.com/sreed119" target="_blank" >GitHub <ArrowUpRight size={22} /></a>
+            <a className="contact-email" href="https://cmu.joinhandshake.com/profiles/tr3tde" target="_blank">Handshake <ArrowUpRight size={22} /></a>
+            <a className="contact-email" href="mailto:stephanie.reed.3026@gmail.com">stephanie.reed.3026@gmail.com <ArrowUpRight size={22} /></a>
+          </div>
         </section>
       </main>
       <footer className="site-footer page-frame"><span>© 2026 Stephanie Reed</span>
