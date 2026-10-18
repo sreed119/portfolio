@@ -2,6 +2,7 @@ import {
     ArrowUpRight, 
     Mail } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const experiences = [
   { number: "01", title: "Software Engineering Intern", company: "Mitsubishi Electric Power Products, Inc.", duration: "Summer 2026", manager: "Mike Doak, Product Line Manager - Power I", image:"Mitsubishi.png", description: "In my role on the Power-I Team, I built a new React dashboard to monitor and audit the performance of Power-I's Machine Learning model services for over 30,000 images per industry client. The dashboard has since been integrated into the Power-I application in production." },
@@ -14,11 +15,11 @@ export default function About() {
       <header className="site-header page-frame">
         <a className="wordmark" href="#top" aria-label="Go to top">Stephanie Reed</a>
         <nav className="site-nav" aria-label="Primary navigation">
-          <a href="#work">Projects</a>
-          <a href="/about">About</a>
-          <a href="/techStack">Tech Stack</a>
-          <a href="#contact">Contact</a>
-          <a href="/documents/Stephanie_Reed_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          <Link href="/#work">Projects</Link>
+          <Link href="/about">About</Link>
+          <Link href="/techStack">Tech Stack</Link>
+          <Link href="/#contact">Contact</Link>
+          <Link href="/documents/Stephanie_Reed_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</Link>
         </nav>
       </header>
 

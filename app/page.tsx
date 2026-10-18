@@ -2,6 +2,7 @@ import {
   ArrowUpRight,
   Mail,
 } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 
 const projects = [
@@ -15,11 +16,11 @@ export default function Home() {
       <header className="site-header page-frame">
         <a className="wordmark" href="#top" aria-label="Go to top">Stephanie Reed</a>
         <nav className="site-nav" aria-label="Primary navigation">
-          <a href="#work">Projects</a>
-          <a href="/about">About</a>
-          <a href="/techStack">Tech Stack</a>
-          <a href="#contact">Contact</a>
-          <a href="/documents/Stephanie_Reed_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+          <Link href="/#work">Projects</Link>
+          <Link href="/about">About</Link>
+          <Link href="/techStack">Tech Stack</Link>
+          <Link href="/#contact">Contact</Link>
+          <Link href="/documents/Stephanie_Reed_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</Link>
         </nav>
       </header>
       <main id="top">
