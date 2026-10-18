@@ -18,7 +18,8 @@ export const skills = [
         "15-112: Fundamentals of Computer Science"
     ] },
     { name: "Java", type: "Back-End", experiences: [
-        "15-121: Data Structures and Algorithms"
+        "15-121: Data Structures and Algorithms",
+        "Nighthawk Robotics (FTC 11943)"
     ] },
     { name: "C#", type: "Back-End", experiences: [
         "Software Engineering Intern at Mitsubishi Electric Power Products, Inc."

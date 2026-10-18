@@ -32,9 +32,11 @@ export default function About() {
         <section className="about-section page-frame">
           <div className="about-grid">
             <div className="about-copy">
-              <p>I&apos;m Stephanie Reed, a senior at Carnegie Mellon University majoring in Information Systems with an additional major in Human-Computer Interaction.</p>
+              <p>I&apos;m Stephanie Reed, a senior at Carnegie Mellon University majoring in Information Systems with an additional major in Human-Computer Interaction. I&apos;ve been on the Dean&apos;s List <b>every semester</b> since my freshman year.</p>
               <p>I&apos;m an aspiring full-stack developer and a Teaching Assistant for Application Design and Development. I aim to create maintainable, impactful software that caters to the needs of users.</p>
-              <p>Outside of coursework and code, I&apos;m a member of CMU&apos;s student choir, C Sharp, and the secretary of CMU&apos;s Cosplay Club.</p>
+              <p>Outside of coursework and code, I&apos;m a executive board member of our student choir, <Link href="https://cmucsharp.com/" target="_blank" rel="noopener noreferrer"><strong>CMU C Sharp</strong></Link>, and the secretary of <Link href="https://tartanconnect.cmu.edu/cosplay/home/" target="_blank" rel="noopener noreferrer"><strong>Cosplay@CMU</strong></Link>. My favorite creative outlets other than front-end work are music and crafts, which ultimately drives my personal projects!</p>
+              <br />
+            <p>Interested in my time at Carnegie Mellon? You can view my latest transcript <Link href="/documents/Stephanie_Reed_Transcript.pdf" target="_blank" rel="noopener noreferrer"><strong>here</strong></Link>, or my relevant courses <Link href="/about#courses"><strong>below</strong></Link>!</p>
               <a className="text-link" href="mailto:stephanie.reed.3026@gmail.com">Get in Touch <ArrowUpRight size={17} /></a>
             </div>
             <div className="about-art">
@@ -77,9 +79,9 @@ export default function About() {
           </div>
           <div className="teaching-grid">
             <div className="teaching-copy">
-              <p>I am a Teaching Assistant for <strong>67-272: Application Design and Development</strong>. This is a core course for the CMU&rsquo;s Information Systems program that teaches students how to build applications in Ruby on Rails. In my time as a teaching assistant, I run weekly labs teaching students React, MVC Software Architecutre, RESTful APIs, and other foundational skills for building software.</p>
+              <p>I am a Teaching Assistant for <b>67-272: Application Design and Development</b>. This is a core course for the CMU&rsquo;s Information Systems program that teaches students how to build applications in Ruby on Rails. In my time as a teaching assistant, I run weekly labs teaching students React, MVC Software Architecutre, RESTful APIs, and other foundational skills for building software.</p>
               <br />
-              <p>This coming spring, I will be the <strong>Head Teaching Assistant</strong> of grading for the course. I will facilitate the grading process of all assignments (exams, quizzes, and projects) for all TAs on staff.</p>
+              <p>This coming spring, I will be the <b>Head Teaching Assistant</b> of grading for the course. I will facilitate the grading process of all assignments (exams, quizzes, and projects) for all TAs on staff.</p>
             </div>
             <div className="teaching-art">
               <Image
@@ -88,6 +90,44 @@ export default function About() {
                 fill
                 sizes="(max-width: 700px) 100vw, 48vw"
               />
+            </div>
+          </div>
+        </section>
+
+        <section className="courses-section page-frame" id="courses">
+          <div className="section-heading">
+            <p className="eyebrow">Courses</p>
+            <span className="section-note">Relevant Coursework</span>
+          </div>
+          <div className="courses">
+            <div className="course-group">
+              <h2>CS Fundamentals</h2>
+              <ul className="course-list">
+                <li>15-110: Principles of Computing</li>
+                <li>15-112: Fundamentals of Computer Science</li>
+                <li>15-121: Data Structures and Algorithms</li>
+              </ul>
+            </div>
+            <div className="course-group">
+              <h2>Software Engineering</h2>
+              <ul className="course-list">
+                <li>17-313: Software Engineering</li>
+                <li>67-262: Database Development</li>
+                <li>67-272: Application Design and Development <b>[Teaching Assistant]</b></li>
+                <li>67-373: Information Systems Consulting Project</li>
+                <li>67-443: Mobile App Development <b>[Currently Taking]</b></li>
+              </ul>
+            </div>
+            <div className="course-group">
+              <h2>UI/UX</h2>
+              <ul className="course-list">
+                <li>05-391: Designing Human-Centered Software (DHCS)</li>
+                <li>05-360: Interaction Design Fundamentals (IxDF)</li>
+                <li>05-410: User-Centered Research and Evaluation (UCRE)</li>
+                <li>05-317: Design of AI Products</li>
+                <li>05-361: Advanced Interaction Design</li>
+                <li>05-315: Persuasive Design <b>[Currently Taking]</b></li>
+              </ul>
             </div>
           </div>
         </section>
@@ -107,8 +147,8 @@ export default function About() {
               />
             </div>
             <div className="robotics-copy">
-              <p>I was the captain of Nighthawk Robotics, team 11943 of the FIRST Tech Challenge from the Nightingale-Bamford School, during the Power Play season (2022-2023).</p>
-              <p>Our team placed as <strong>Finalist Alliance Captains in the NYC Super Qualifier</strong> and won the <strong>Think Award at the New York City Championships</strong>. I was a member of the team in all four years of high school at Nightingale, specializing in autonomous robot programming in Java.</p>
+              <p>I was the captain of <Link href="https://www.nighthawkrobotics.com/" target="_blank" rel="noopener noreferrer"><strong>Nighthawk Robotics</strong></Link>, team 11943 of the FIRST Tech Challenge from the Nightingale-Bamford School, during the Power Play season (2022-2023).</p>
+              <p>Our team placed as <b>Finalist Alliance Captains in the NYC Super Qualifier</b> and won the <b>Think Award at the New York City Championships</b>. I was a member of the team in all four years of high school at Nightingale, specializing in autonomous robot programming in Java.</p>
             </div>
           </div>
         </section>
