@@ -130,38 +130,192 @@
   }
 }
 
-:root { --ink: #1c1c1a; --paper: #f0ede6; --line: #c9c4b8; --orange: #e85d32; --blue: #bccbd2; --yellow: #e4c54e; }
-body { background: var(--paper); color: var(--ink); }
-.portfolio-shell { overflow: hidden; }
-.page-frame { width: min(100% - 48px, 1240px); margin-inline: auto; }
-.site-header { display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; padding: 28px 0; border-bottom: 1px solid var(--line); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
-.wordmark { font-weight: 700; letter-spacing: .02em; }
-.site-nav { display: flex; gap: 24px; justify-content: center; }
-.site-nav a, .site-footer a { transition: color .2s ease; }
-.site-nav a { white-space: nowrap; }
-.site-nav a:hover, .site-footer a:hover, .text-link:hover { color: var(--orange); }
-.availability { justify-self: end; display: flex; align-items: center; gap: 8px; }
-.availability-dot { width: 7px; height: 7px; border-radius: 50%; background: #4f8b61; }
-.hero { min-height: 690px; padding: clamp(64px, 8vw, 92px) clamp(24px, 5vw, 72px) clamp(42px, 5vw, 60px); position: relative; display: flex; flex-direction: column; overflow: hidden; color: #fff; }
-.hero::before { position: absolute; inset: 0; z-index: 0; background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .62)), url('/images/cmuCampus.jpg') center / cover no-repeat; content: ''; }
-.hero > * { position: relative; z-index: 1; }
-.eyebrow { font-size: 11px; letter-spacing: .13em; text-transform: uppercase; color: #66645d; }
-.hero .eyebrow { color: rgba(255, 255, 255, .78); }
-.eyebrow span { margin-left: 12px; color: var(--ink); }
-.hero-title { margin: auto 0 36px; max-width: 900px; font-size: clamp(4.5rem, 10.7vw, 10.3rem); line-height: .86; letter-spacing: -.07em; font-weight: 500; }
-em { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.06em; }
-.hero-bottom { display: flex; justify-content: space-between; align-items: end; }
-.hero-intro { max-width: 330px; font-size: 15px; line-height: 1.5; }
-.hero .text-link { color: #fff; border-color: #fff; }
-.hero-photo { position: absolute; right: 8%; top: 28%; width: 235px; height: 235px; overflow: hidden; border-radius: 50%; background: var(--blue); }
-.hero-photo img { object-fit: cover; }
-.circle-link { display: grid; place-items: center; width: 58px; height: 58px; border: 1px solid var(--ink); border-radius: 50%; transition: background .2s ease, color .2s ease; }
-.circle-link:hover { background: var(--ink); color: var(--paper); }
-.hero-stamp { position: absolute; top: 46%; right: 3%; width: 106px; height: 106px; display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 50%; transform: rotate(12deg); text-align: center; font-size: 25px; line-height: .75; font-weight: 700; }
-.hero-stamp span { font-size: 7px; line-height: 1.15; letter-spacing: .13em; }
+:root { 
+  --ink: #1c1c1a;
+  --paper:#f0ede6;
+  --line: #c9c4b8;
+  --orange: #e85d32;
+  --blue: #bccbd2;
+  --yellow: #e4c54e; 
+}
+
+/* GENERAL */
+body { 
+  background: var(--paper); 
+  color: var(--ink); 
+}
+
+.portfolio-shell { 
+  overflow: hidden; 
+}
+.page-frame { 
+  width: min(100% - 48px, 1240px); 
+  margin-inline: auto; 
+}
+
+.site-header { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  align-items: center; 
+  padding: 28px 0; 
+  border-bottom: 1px solid var(--line); 
+  font-size: 12px; 
+  text-transform: uppercase; 
+  letter-spacing: .08em; 
+}
+
+.wordmark { 
+  font-weight: 700; 
+  letter-spacing: .02em; 
+}
+
+.site-nav { 
+  display: flex; 
+  gap: 24px; 
+  justify-content: center; 
+}
+
+.site-nav a, .site-footer a { 
+  transition: color .2s ease; 
+}
+
+.site-nav a { 
+  white-space: nowrap; 
+}
+
+.site-nav a:hover, .site-footer a:hover, .text-link:hover { 
+  color: var(--orange); 
+}
+
+.hero { 
+  min-height: 690px; 
+  padding: clamp(64px, 8vw, 92px) clamp(24px, 5vw, 72px) clamp(42px, 5vw, 60px); 
+  position: relative; 
+  display: flex; 
+  flex-direction: column; 
+  overflow: hidden; 
+  color: #fff; 
+}
+
+.hero::before { 
+  position: absolute; 
+  inset: 0; 
+  z-index: 0; 
+  background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .62)), url('/images/cmuCampus.jpg') center / cover no-repeat; 
+  content: ''; 
+}
+
+.hero > * { 
+  position: relative; 
+  z-index: 1; 
+}
+
+.eyebrow { 
+  font-size: 11px; 
+  letter-spacing: .13em; 
+  text-transform: uppercase; 
+  color: #66645d; 
+}
+
+.hero .eyebrow { 
+  color: rgba(255, 255, 255, .78); 
+}
+
+.eyebrow span { 
+  margin-left: 12px; color: var(--ink); 
+}
+
+.hero-title { 
+  margin: auto 0 36px; 
+  max-width: 900px; 
+  font-size: clamp(4.5rem, 10.7vw, 10.3rem); 
+  line-height: .86; 
+  letter-spacing: -.07em; 
+  font-weight: 500; 
+}
+
+em { 
+  font-family: Georgia, serif; 
+  font-weight: 400; 
+  letter-spacing: -.06em; 
+}
+
+.hero-bottom { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: end; 
+}
+
+.hero-intro { 
+  max-width: 330px; 
+  font-size: 15px; 
+  line-height: 1.5; 
+}
+
+.hero .text-link { 
+  color: #fff; 
+  border-color: #fff; 
+}
+
+.hero-photo { 
+  position: absolute; 
+  right: 8%; 
+  top: 28%; 
+  width: 235px; 
+  height: 235px; 
+  overflow: hidden; 
+  border-radius: 50%; 
+  background: var(--blue); 
+}
+
+.hero-photo img { 
+  object-fit: cover; 
+}
+
+.section-note { 
+  color: #77736b; font-size: 12px; 
+}
+
+.section-heading { 
+  display: flex; 
+  justify-content: space-between; 
+  margin-bottom: 42px; 
+}
+
+.text-link { 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px; 
+  margin-top: 40px; 
+  border-bottom: 1px solid var(--ink); 
+  padding-bottom: 5px; 
+  font-size: 13px; 
+}
+
+.site-footer { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  border-top: 1px solid var(--line); 
+  padding: 22px 0 28px; 
+  color: #77736b; 
+  font-size: 11px; 
+  text-transform: uppercase; 
+  letter-spacing: .08em; 
+}
+
+.social-links { 
+  display: flex; 
+  gap: 18px; 
+  color: var(--ink); 
+}
+
+.reveal { 
+  animation: rise .7s both; 
+}
+
+/* HOME PAGE */
 .work-section { border-top: 1px solid var(--line); padding: 30px 0 30px; }
-.section-heading { display: flex; justify-content: space-between; margin-bottom: 42px; }
-.section-note { color: #77736b; font-size: 12px; }
 .project-row { display: grid; grid-template-columns: minmax(300px, 1.25fr) 1fr 30px; gap: clamp(25px, 5vw, 78px); align-items: center; padding: 22px 0; border-top: 1px solid var(--line); }
 .project-art { height: 285px; position: relative; overflow: hidden; }
 .project-art > span { position: absolute; top: 16px; left: 18px; font: 12px Georgia, serif; z-index: 1; }
@@ -177,24 +331,18 @@ em { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.06em; }
 .project-copy p { max-width: 280px; color: #66645d; font-size: 14px; line-height: 1.45; }
 .project-arrow { align-self: start; transition: transform .2s ease; }
 .project-row:hover .project-arrow { transform: translate(4px, -4px); }
+.contact-section { display: grid; grid-template-columns: 1fr auto; align-items: end; padding: 35px 0 120px; border-top: 1px solid var(--line); }
+.contact-section h2 { margin-top: 78px; }
+.contact-links { grid-column: 2; display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+.contact-email { display: inline-flex; align-items: center; gap: 14px; border-bottom: 1px solid var(--ink); padding-bottom: 8px; font-size: clamp(1rem, 1.8vw, 1.45rem); }
+
+/* ABOUT PAGE */
 .about-section { padding: 30px 0 155px; border-top: 1px solid var(--line); }
 .about-page-intro { position: relative; overflow: hidden; padding: clamp(64px, 8vw, 92px) clamp(24px, 5vw, 72px) clamp(42px, 5vw, 60px); color: #fff; }
 .about-page-intro::before { position: absolute; inset: 0; z-index: 0; background: linear-gradient(rgba(0, 0, 0, .62), rgba(0, 0, 0, .62)), url('/images/cmuCampus2.jpg') center / cover no-repeat; content: ''; }
 .about-page-intro > * { position: relative; z-index: 1; }
 .about-page-intro .eyebrow { color: rgba(255, 255, 255, .78); }
 .about-page-title { margin-top: 50px; margin-bottom: 20px; font-size: clamp(4.5rem, 10vw, 10rem); line-height: .86; letter-spacing: -.07em; font-weight: 500; }
-.tech-stack-section { padding: 30px 0 120px; border-top: 1px solid var(--line); }
-.skills-chart { border-bottom: 1px solid var(--line); }
-.skills-chart-header, .skill-row { display: grid; grid-template-columns: minmax(150px, .65fr) minmax(150px, .75fr) minmax(320px, 1.6fr); gap: clamp(20px, 5vw, 78px); }
-.skills-chart-header { padding: 0 0 14px; color: #77736b; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; }
-.skill-filter { display: flex; align-items: center; gap: 10px; }
-.skill-filter select { padding: 5px 24px 5px 0; border: 0; border-bottom: 1px solid var(--line); color: var(--ink); background: transparent; font: inherit; letter-spacing: normal; cursor: pointer; }
-.skill-filter select:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
-.skill-row { align-items: start; padding: 20px 0; border-top: 1px solid var(--line); }
-.skill-row h3 { margin: 0; font-size: clamp(1.35rem, 2.2vw, 2rem); font-weight: 500; letter-spacing: -.04em; }
-.skill-type { color: #66645d; font-size: 13px; line-height: 1.5; }
-.skill-experiences { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
-.skill-experiences li { padding: 7px 10px; border: 1px solid var(--line); color: #66645d; font-size: 12px; line-height: 1.35; }
 .about-details { display: grid; grid-template-columns: 1fr 1fr; gap: 10%; padding: 30px 0 130px; border-top: 1px solid var(--line); }
 .about-details > div { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .about-details > div > p:last-child { font-size: 16px; line-height: 1.5; }
@@ -247,14 +395,21 @@ em { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.06em; }
 .robotics-copy { max-width: 430px; font-size: 16px; line-height: 1.55; }
 .robotics-copy p + p { margin-top: 22px; }
 .robotics-copy strong { font-weight: 500; border-bottom: 1px solid var(--ink); }
-.text-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 40px; border-bottom: 1px solid var(--ink); padding-bottom: 5px; font-size: 13px; }
-.contact-section { display: grid; grid-template-columns: 1fr auto; align-items: end; padding: 35px 0 120px; border-top: 1px solid var(--line); }
-.contact-section h2 { margin-top: 78px; }
-.contact-links { grid-column: 2; display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
-.contact-email { display: inline-flex; align-items: center; gap: 14px; border-bottom: 1px solid var(--ink); padding-bottom: 8px; font-size: clamp(1rem, 1.8vw, 1.45rem); }
-.site-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding: 22px 0 28px; color: #77736b; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
-.social-links { display: flex; gap: 18px; color: var(--ink); }
-.reveal { animation: rise .7s both; }
+
+/* TECH STACK PAGE */
+.tech-stack-section { padding: 30px 0 120px; border-top: 1px solid var(--line); }
+.skills-chart { border-bottom: 1px solid var(--line); }
+.skills-chart-header, .skill-row { display: grid; grid-template-columns: minmax(150px, .65fr) minmax(150px, .75fr) minmax(320px, 1.6fr); gap: clamp(20px, 5vw, 78px); }
+.skills-chart-header { padding: 0 0 14px; color: #77736b; font-size: 11px; text-transform: uppercase; letter-spacing: .1em; }
+.skill-filter { display: flex; align-items: center; gap: 10px; }
+.skill-filter select { padding: 5px 24px 5px 0; border: 0; border-bottom: 1px solid var(--line); color: var(--ink); background: transparent; font: inherit; letter-spacing: normal; cursor: pointer; }
+.skill-filter select:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+.skill-row { align-items: start; padding: 20px 0; border-top: 1px solid var(--line); }
+.skill-row h3 { margin: 0; font-size: clamp(1.35rem, 2.2vw, 2rem); font-weight: 500; letter-spacing: -.04em; }
+.skill-type { color: #66645d; font-size: 13px; line-height: 1.5; }
+.skill-experiences { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.skill-experiences li { padding: 7px 10px; border: 1px solid var(--line); color: #66645d; font-size: 12px; line-height: 1.35; }
+
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
 @media (max-width: 1299px) { .hero { min-height: auto; } .hero .eyebrow { order: 1; } .hero-photo { position: relative; top: auto; right: auto; order: 2; align-self: center; margin: 28px 0 36px; } .hero-title { order: 3; margin: 0 0 36px; } .hero-bottom { order: 4; } }
 @media (max-width: 700px) { .page-frame { width: min(100% - 32px, 1240px); } .site-header { grid-template-columns: 1fr; gap: 20px; } .site-nav { display: flex; grid-column: 1 / -1; justify-content: flex-start; gap: 12px 18px; flex-wrap: wrap; } .availability { grid-column: 1 / -1; justify-self: start; } .hero { min-height: 620px; padding-top: 60px; } .hero-title { max-width: 72%; font-size: clamp(4rem, 20vw, 7rem); margin-top: auto; } .hero-photo { width: 125px; height: 125px; top: auto; right: auto; } .hero-stamp { top: 33%; right: 0; transform: scale(.72) rotate(12deg); } .hero-bottom { display: block; } .hero-intro { max-width: 330px; } .work-section { padding-bottom: 100px; } .section-note { max-width: 145px; text-align: right; line-height: 1.3; } .project-row { grid-template-columns: 1fr 24px; gap: 18px; } .project-art { grid-column: 1 / -1; height: 240px; } .project-copy { grid-column: 1; } .about-section { padding-bottom: 100px; } .about-page-intro { padding-top: 60px; } .about-page-title { margin-top: 100px; font-size: clamp(4rem, 20vw, 7rem); } .about-grid { grid-template-columns: 1fr; gap: 45px; margin-top: 55px; } .about-copy { padding-top: 0; } .about-art { display: block; width: 100%; min-height: 420px; } .about-details { grid-template-columns: 1fr; gap: 45px; padding-bottom: 90px; } .experience-section { padding-bottom: 100px; } .experience-row { grid-template-columns: 104px 1fr; gap: 18px; padding: 20px 0; } .experience-art { width: 104px; height: 104px; } .experience-copy h2 { font-size: 1.55rem; } .experience-duration, .experience-manager { grid-column: 2; } .experience-manager { margin-top: -8px; } .experience-description { grid-column: 1 / -1; max-width: none; } .teaching-grid { grid-template-columns: 1fr; gap: 30px; } .teaching-art { display: block; width: 100%; min-height: 240px; } .courses { grid-template-columns: 1fr; gap: 45px; } .courses-section { padding-bottom: 100px; } .contact-section { display: block; padding-bottom: 90px; } .contact-section h2 { margin: 55px 0 55px; } .site-footer { gap: 20px; flex-wrap: wrap; } .site-footer > :last-child { width: 100%; } .skills-chart-header { display: grid; grid-template-columns: 1fr; padding-bottom: 16px; } .skills-chart-header > span { display: none; } .skill-filter { justify-content: space-between; } .skill-row { grid-template-columns: 1fr; gap: 8px; padding: 18px 0; } .skill-type { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; } .skill-experiences { margin-top: 4px; } }

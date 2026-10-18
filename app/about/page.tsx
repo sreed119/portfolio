@@ -58,7 +58,12 @@ export default function About() {
           <div className="experience-list">{experiences.map((experience) => 
             <div className="experience-row" key={experience.number}>
               <div className="experience-art">
-                <Image className="experience-image" src={"/images/" + experience.image} alt={experience.title} fill priority sizes="(max-width: 700px) 42vw, 260px"/>
+                <Image className="experience-image" 
+                  src={"/images/" + experience.image} 
+                  alt={experience.title} 
+                  fill 
+                  priority 
+                  sizes="(max-width: 700px) 42vw, 260px"/>
               </div>
               <div className="experience-copy">
                 <h2>{experience.title}</h2>
