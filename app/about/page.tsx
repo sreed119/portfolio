@@ -1,7 +1,6 @@
 import { 
     ArrowUpRight, 
     Mail } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 
 const experiences = [
@@ -13,12 +12,13 @@ export default function About() {
   return ( 
     <div className="portfolio-shell">
       <header className="site-header page-frame">
-        <Link className="wordmark" href="/" aria-label="Go to home">Stephanie Reed</Link>
+        <a className="wordmark" href="#top" aria-label="Go to top">Stephanie Reed</a>
         <nav className="site-nav" aria-label="Primary navigation">
-          <Link href="/">Projects</Link>
-          <a href="/about" aria-current="page">About</a>
-          <Link href="/#contact">Contact</Link>
-          <Link href="/#contact">Resume</Link>
+          <a href="#work">Projects</a>
+          <a href="/about">About</a>
+          <a href="/techStack">Tech Stack</a>
+          <a href="#contact">Contact</a>
+          <a href="/documents/Stephanie_Reed_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
         </nav>
       </header>
 

@@ -14,7 +14,13 @@ export default function Home() {
     <div className="portfolio-shell">
       <header className="site-header page-frame">
         <a className="wordmark" href="#top" aria-label="Go to top">Stephanie Reed</a>
-        <nav className="site-nav" aria-label="Primary navigation"><a href="#work">Projects</a><a href="/about">About</a><a href="#contact">Contact</a><a href="/documents/Stephanie_Reed_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a></nav>
+        <nav className="site-nav" aria-label="Primary navigation">
+          <a href="#work">Projects</a>
+          <a href="/about">About</a>
+          <a href="/techStack">Tech Stack</a>
+          <a href="#contact">Contact</a>
+          <a href="/documents/Stephanie_Reed_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+        </nav>
       </header>
       <main id="top">
         <section className="hero page-frame">
